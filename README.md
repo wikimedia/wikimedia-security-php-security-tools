@@ -14,7 +14,7 @@ sed
 ```
 
 ## Installing
-1. ```git clone "https://gerrit.wikimedia.org/r/wikimedia/security/tooling"```
+1. ```git clone "https://gerrit.wikimedia.org/r/wikimedia/security/php-security-tools"```
 
 ## Usage
 1. ```cd php-security-tools```
