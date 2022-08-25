@@ -620,7 +620,7 @@ function main() {
 	check_env_vars
 
 	# set bin dependencies
-	bins=("cat" "composer" "docker" "php" "sed")
+	bins=("cat" "docker" "sed")
 
 	check_binaries "${bins[@]}"
 	check_dockers "pst_*"
