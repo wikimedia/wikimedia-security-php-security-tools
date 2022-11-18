@@ -80,7 +80,7 @@ WORKDIR /src
 
 
 # node image #
-FROM docker-registry.wikimedia.org/releng/node10 AS node
+FROM docker-registry.wikimedia.org/releng/node16 AS node
 
 # install snyk
 USER root
