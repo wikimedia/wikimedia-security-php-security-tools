@@ -69,11 +69,14 @@ RUN composer require \
 RUN composer require pheromone/phpcs-security-audit
 RUN sh vendor/pheromone/phpcs-security-audit/symlink.sh
 
-# config symfony security-check (https://github.com/sensiolabs/security-checker)
-WORKDIR /opt/securitycheck
-RUN composer require \
-  -n --no-plugins --no-scripts \
-  sensiolabs/security-checker dev-master
+USER root
+
+# config local-php-security-checker (https://github.com/fabpot/local-php-security-checker)
+WORKDIR /opt/securitychecker
+RUN curl -sL -o local-php-security-checker https://github.com/fabpot/local-php-security-checker/releases/download/v2.0.4/local-php-security-checker_2.0.4_linux_amd64
+RUN chmod +x local-php-security-checker
+
+USER nobody
 
 # default to /src
 WORKDIR /src
